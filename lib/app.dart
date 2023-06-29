@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         initialRoute: '/',
         onGenerateRoute: RouteGenerator.generateRoute,
         theme: _getTheme());
@@ -19,10 +20,15 @@ class MyApp extends StatelessWidget {
 
   ThemeData _getTheme() {
     return ThemeData(
-        appBarTheme: const AppBarTheme(titleTextStyle: Styles.navBarTitle),
-        textTheme: TextTheme(
-          titleMedium: Styles.headerLarge,
-          bodyMedium: Styles.textDefault,
+        appBarTheme: const AppBarTheme(
+            backgroundColor: Colors.white,
+            foregroundColor: Colors.black,
+            titleTextStyle: Styles.appBarTextStyle),
+        textTheme: const TextTheme(
+          titleMedium: Styles.titleTextStyle,
+          titleSmall: Styles.subTitleTextStyle,
+          bodyMedium: Styles.body1TextStyle,
+          bodySmall: Styles.captionTextStyle,
         ));
   }
 }

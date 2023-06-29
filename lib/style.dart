@@ -1,71 +1,59 @@
 import 'package:flutter/material.dart';
 
 class Styles {
-  static const _textSizeLarge = 22.0;
-  static const _textSizeDefault = 16.0;
-  static const _textSizeSmall = 12.0;
-  static const String _fontNameDefault = 'Montserrat';
+  static const textSizeLarge = 22.0;
+  static const textSizeMedium = 16.0;
+  static const textSizeSmall = 14.0;
+
+  static const String fontNameDefault = 'Montserrat';
 
   static const defaultPaddingS = 12.0;
   static const defaultPaddingM = 16.0;
 
-  static final Color _textColorStrong = _hexToColor('000000');
-  static final Color _textColorDefault = _hexToColor('000000');
-  static final Color _textColorFaint = _hexToColor('999999');
-  static final Color textColorBright = _hexToColor('FFFFFF');
-  static final Color accentColor = _hexToColor('FF0000');
+  static const Color textColorDark = Colors.black;
+  static const Color textColorLight = Colors.white;
+  static const Color textColorAccent = Color.fromARGB(255, 126, 15, 7);
+  static const Color textColorFaint = Color.fromRGBO(125, 125, 125, 1.0);
 
-  static const navBarTitle = TextStyle(
-    fontFamily: _fontNameDefault,
+  static const appBarTextStyleHome = TextStyle(
+    fontFamily: fontNameDefault,
     fontWeight: FontWeight.w600,
-    fontSize: _textSizeDefault,
-    color: Colors.white,
+    fontSize: 28.0,
+    color: Colors.black,
   );
 
-  static final headerLarge = TextStyle(
-    fontFamily: _fontNameDefault,
-    fontSize: _textSizeLarge,
-    color: _textColorStrong,
+  static const appBarTextStyle = TextStyle(
+    fontFamily: fontNameDefault,
+    fontWeight: FontWeight.w600,
+    fontSize: textSizeMedium,
+    color: Colors.black,
   );
 
-  static final textDefault = TextStyle(
-    fontFamily: _fontNameDefault,
-    fontSize: _textSizeDefault,
-    color: _textColorDefault,
-    height: 1.2,
+  static const titleTextStyle = TextStyle(
+    fontFamily: fontNameDefault,
+    fontWeight: FontWeight.w600,
+    fontSize: textSizeLarge,
+    color: textColorDark,
   );
 
-  static final textCTAButton = TextStyle(
-    fontFamily: _fontNameDefault,
-    fontSize: _textSizeLarge,
-    color: textColorBright,
+  static const subTitleTextStyle = TextStyle(
+    fontFamily: fontNameDefault,
+    fontWeight: FontWeight.w300,
+    fontSize: textSizeMedium,
+    color: textColorAccent,
   );
 
-  static final locationTileTitleLight = TextStyle(
-    fontFamily: _fontNameDefault,
-    fontSize: _textSizeLarge,
-    color: _textColorStrong,
+  static const captionTextStyle = TextStyle(
+    fontFamily: fontNameDefault,
+    fontWeight: FontWeight.w300,
+    fontSize: textSizeSmall,
+    color: textColorDark,
   );
 
-  static final locationTileTitleDark = TextStyle(
-    fontFamily: _fontNameDefault,
-    fontSize: _textSizeLarge,
-    color: textColorBright,
+  static const body1TextStyle = TextStyle(
+    fontFamily: fontNameDefault,
+    fontWeight: FontWeight.w300,
+    fontSize: textSizeMedium,
+    color: Colors.black,
   );
-
-  static final locationTileSubTitle = TextStyle(
-    fontFamily: _fontNameDefault,
-    fontSize: _textSizeDefault,
-    color: accentColor,
-  );
-
-  static final locationTileCaption = TextStyle(
-    fontFamily: _fontNameDefault,
-    fontSize: _textSizeSmall,
-    color: _textColorFaint,
-  );
-
-  static Color _hexToColor(String hexCode) {
-    return Color(int.parse(hexCode.substring(0, 6), radix: 16) + 0xFF000000);
-  }
 }
