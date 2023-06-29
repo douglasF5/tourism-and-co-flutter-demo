@@ -12,8 +12,6 @@ Mobile app to kick off my studies of Flutter and get to know basic widgets and o
 
 <br>
 
-## Showcase and examples
-
 <img src="./.github/project-screenshot.png">
 
 <br/>
